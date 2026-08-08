@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư mời đặc biệt 🕷️ Spider-Man: Brand New Day</title>
+<meta name="theme-color" content="#0B1035">
+<meta property="og:title" content="Thư mời VIP · Chỉ dành cho một người 🕷️">
+<meta property="og:description" content="Spider-Man: Brand New Day · 19:30 tối nay · BHD Star The Garden · Ghế E09 & E10. Mở ra xem đi!">
+<meta property="og:type" content="website">
+<meta property="og:image" content="poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#E62429;
+    --red-deep:#B3151F;
+    --night:#0B1035;
+    --gold:#F5B942;
+    --white:#F5F6FA;
+    --ink:#1A1F3C;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{
+    font-family:'Be Vietnam Pro',sans-serif;
+    color:var(--white);
+    background:
+      radial-gradient(1100px 600px at 80% -10%, #26307C 0%, transparent 60%),
+      radial-gradient(900px 700px at 5% 110%, #3A1140 0%, transparent 55%),
+      linear-gradient(180deg, var(--night) 0%, #070A24 100%);
+    min-height:100vh;
+    min-height:100svh;
+    overflow-x:hidden;
+    display:flex;flex-direction:column;align-items:center;
+  }
+
+  /* ================= NỀN ================= */
+  .city-lights{position:fixed;inset:0;pointer-events:none;z-index:0;will-change:transform}
+  .city-lights span{
+    position:absolute;border-radius:50%;background:var(--gold);
+    animation:twinkle 3.5s ease-in-out infinite;
+  }
+  @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.65}}
+
+  .fog{
+    position:fixed;inset:-20%;z-index:0;pointer-events:none;opacity:.5;
+    background:
+      radial-gradient(600px 300px at 20% 30%, rgba(80,60,180,.16), transparent 70%),
+      radial-gradient(700px 350px at 80% 70%, rgba(230,36,41,.10), transparent 70%);
+    animation:fogDrift 26s ease-in-out infinite alternate;
+  }
+  @keyframes fogDrift{from{transform:translate(-3%,-2%) scale(1)}to{transform:translate(3%,2%) scale(1.06)}}
+
+  /* mạng nhện góc — vẽ dần khi mở trang */
+  .web{position:fixed;z-index:0;opacity:.2;pointer-events:none}
+  .web.tl{top:-10px;left:-10px}
+  .web.br{bottom:-10px;right:-10px;transform:rotate(180deg)}
+  .web path{
+    stroke-dasharray:600;stroke-dashoffset:600;
+    animation:draw 2.4s ease-out forwards;
+  }
+  .web path:nth-child(2){animation-delay:.5s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+
+  /* ================= NHỆN ĐU TƠ (INTRO) ================= */
+  .rig{
+    position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;
+    animation:dropIn 1.1s cubic-bezier(.25,1.4,.4,1) both;
+  }
+  @keyframes dropIn{from{transform:translateY(-180px)}to{transform:translateY(0)}}
+  .thread{
+    width:2px;height:88px;
+    background:linear-gradient(180deg, rgba(245,246,250,0), rgba(245,246,250,.75));
+    transform-origin:top center;
+    animation:threadGrow .9s ease-out both;
+  }
+  @keyframes threadGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  .spider{
+    font-size:26px;line-height:1;margin-bottom:14px;cursor:pointer;user-select:none;
+    transform-origin:top center;
+    animation:sway 4s ease-in-out infinite 1.1s;
+    filter:drop-shadow(0 4px 6px rgba(0,0,0,.5));
+    transition:transform .2s;
+  }
+  .spider.drop{animation:spiderDrop .6s cubic-bezier(.3,1.8,.4,1)}
+  @keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+  @keyframes spiderDrop{30%{transform:translateY(46px) scale(1.25)}100%{transform:translateY(0)}}
+
+  /* ================= TẤM VÉ ================= */
+  .stage{position:relative;z-index:2;perspective:1200px;width:min(560px, calc(100% - 32px));margin-bottom:60px}
+  .ticket{
+    position:relative;
+    background:var(--white);color:var(--ink);
+    border-radius:18px;overflow:hidden;
+    box-shadow:0 30px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08);
+    transform-style:preserve-3d;
+    transition:transform .18s ease-out;
+    --tearY:-100px;
+    -webkit-mask-image:
+      radial-gradient(circle 14px at 0 var(--tearY), transparent 13px, #000 14px),
+      radial-gradient(circle 14px at 100% var(--tearY), transparent 13px, #000 14px);
+    mask-image:
+      radial-gradient(circle 14px at 0 var(--tearY), transparent 13px, #000 14px),
+      radial-gradient(circle 14px at 100% var(--tearY), transparent 13px, #000 14px);
+    -webkit-mask-composite:source-in;
+    mask-composite:intersect;
+    animation:ticketIn .9s cubic-bezier(.2,1.4,.35,1) .55s both;
+  }
+  @keyframes ticketIn{from{opacity:0;transform:translateY(60px) scale(.92) rotateX(12deg)}to{opacity:1;transform:none}}
+  .glare{
+    position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;
+    background:radial-gradient(360px 360px at var(--gx,50%) var(--gy,50%), rgba(255,255,255,.35), transparent 60%);
+    transition:opacity .3s;mix-blend-mode:soft-light;
+  }
+  .stage:hover .glare,.stage.touching .glare{opacity:1}
+
+  /* ---- poster hero ---- */
+  .hero{position:relative;height:min(320px, 64vw);overflow:hidden}
+  .hero img{
+    width:100%;height:100%;object-fit:cover;object-position:50% 18%;
+    animation:kenburns 16s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.1) translateY(-2%)}}
+  .hero::after{ /* fade xuống màu đỏ của header cho liền mạch */
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 45%, rgba(230,36,41,.35) 78%, var(--red) 100%);
+  }
+
+  .ticket-head{
+    background:linear-gradient(180deg, var(--red) 0%, var(--red-deep) 100%);
+    padding:22px 28px 24px;position:relative;text-align:center;
+  }
+  .ticket-head::after{
+    content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;
+    background-image:
+      repeating-radial-gradient(circle at 50% -40%, transparent 0 34px, #fff 34px 35px),
+      repeating-conic-gradient(from 0deg at 50% -40%, transparent 0 14deg, #fff 14deg 14.6deg);
+  }
+  .eyebrow{
+    font-size:11px;letter-spacing:.28em;font-weight:700;
+    color:#FFD9DB;text-transform:uppercase;margin-bottom:12px;
+  }
+  h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(34px, 8vw, 52px);
+    letter-spacing:.02em;line-height:.95;color:#fff;
+    text-shadow:0 3px 0 rgba(0,0,0,.25);
+  }
+  h1 .sub{
+    display:block;margin-top:8px;
+    font-size:clamp(16px, 4vw, 22px);letter-spacing:.32em;
+    background:linear-gradient(100deg, var(--gold) 40%, #FFF3D0 50%, var(--gold) 60%);
+    background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shine 3.2s linear infinite 1.6s;
+  }
+  @keyframes shine{from{background-position:120% 0}to{background-position:-120% 0}}
+
+  /* đếm ngược giờ chiếu */
+  .countdown{
+    position:relative;z-index:1;margin-top:16px;display:inline-flex;align-items:center;gap:8px;
+    background:rgba(11,16,53,.55);border:1px solid rgba(245,185,66,.5);
+    color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.05em;
+    padding:8px 16px;border-radius:999px;
+    box-shadow:0 0 18px rgba(245,185,66,.25);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{box-shadow:0 0 12px rgba(245,185,66,.2)}50%{box-shadow:0 0 26px rgba(245,185,66,.5)}}
+
+  .msg{padding:26px 28px 8px;font-size:15.5px;line-height:1.75}
+  .msg .to{font-weight:700;color:var(--red-deep)}
+  .msg p+p{margin-top:10px}
+
+  .tear{position:relative;height:26px;margin-top:18px;border-top:2px dashed #C7CBDD}
+
+  .details{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;padding:4px 28px 22px}
+  .cell{opacity:0;animation:riseIn .6s ease-out forwards}
+  .cell:nth-child(1){animation-delay:1.0s}
+  .cell:nth-child(2){animation-delay:1.15s}
+  .cell:nth-child(3){animation-delay:1.3s}
+  @keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .cell .label{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#8A90AE;font-weight:700;margin-bottom:4px}
+  .cell .value{font-size:15px;font-weight:700;color:var(--ink)}
+  .cell .value small{display:block;font-weight:500;font-size:12.5px;color:#5A6080;margin-top:2px}
+  .cell.wide{grid-column:1 / -1}
+
+  .actions{display:flex;gap:12px;flex-wrap:wrap;padding:0 28px 30px}
+  button{
+    font-family:'Be Vietnam Pro',sans-serif;font-weight:700;
+    border:none;border-radius:12px;cursor:pointer;
+    padding:14px 22px;font-size:15px;position:relative;overflow:hidden;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  #yes{
+    flex:1;min-width:180px;color:#fff;
+    background:linear-gradient(135deg, var(--red), var(--red-deep));
+    box-shadow:0 8px 20px rgba(230,36,41,.35);
+    animation:heartbeat 1.8s ease-in-out infinite 2.2s;
+  }
+  @keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.04)}24%{transform:scale(1)}}
+  #yes::after{ /* sheen quét qua nút */
+    content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;
+    background:linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent);
+    animation:btnShine 3s ease-in-out infinite 2.6s;
+  }
+  @keyframes btnShine{0%{left:-80%}40%,100%{left:130%}}
+  #yes:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 26px rgba(230,36,41,.5)}
+  #maybe{background:#E9EBF4;color:#5A6080}
+  #maybe:hover{transform:translateY(-1px)}
+  button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+  /* ================= BẮN TƠ KHI CHẠM ================= */
+  .splat{
+    position:fixed;z-index:9;pointer-events:none;
+    transform:translate(-50%,-50%) scale(.2);opacity:.9;
+    animation:splat .9s ease-out forwards;
+  }
+  @keyframes splat{
+    30%{transform:translate(-50%,-50%) scale(1);opacity:.9}
+    100%{transform:translate(-50%,-50%) scale(1.15);opacity:0}
+  }
+
+  /* ================= MÀN ĂN MỪNG ================= */
+  .celebrate{
+    position:fixed;inset:0;z-index:10;display:none;
+    align-items:center;justify-content:center;flex-direction:column;
+    background:rgba(7,10,36,.94);backdrop-filter:blur(8px);
+    text-align:center;padding:24px;overflow:hidden;
+  }
+  .celebrate.show{display:flex}
+  #fw{position:absolute;inset:0;width:100%;height:100%}
+  .flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+  .celebrate.show .flash{animation:flash .55s ease-out}
+  @keyframes flash{from{opacity:.85}to{opacity:0}}
+
+  /* tia sáng kiểu truyện tranh xoay chậm sau chữ */
+  .rays{
+    position:absolute;left:50%;top:44%;width:160vmax;height:160vmax;
+    transform:translate(-50%,-50%);pointer-events:none;opacity:0;
+    background:repeating-conic-gradient(from 0deg,
+      rgba(230,36,41,.28) 0 7deg, transparent 7deg 15deg,
+      rgba(245,185,66,.14) 15deg 19deg, transparent 19deg 26deg);
+    -webkit-mask-image:radial-gradient(circle, #000 0%, transparent 62%);
+    mask-image:radial-gradient(circle, #000 0%, transparent 62%);
+  }
+  .celebrate.show .rays{animation:raysIn .8s ease-out .2s forwards, spinRays 36s linear infinite}
+  @keyframes raysIn{to{opacity:1}}
+  @keyframes spinRays{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+  .celebrate::before,.celebrate::after{ /* vòng sóng đỏ lan ra */
+    content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;
+    border:2px solid rgba(230,36,41,.7);transform:translate(-50%,-50%);
+    animation:ring 1.6s ease-out infinite;
+  }
+  .celebrate::after{animation-delay:.8s;border-color:rgba(245,185,66,.6)}
+  @keyframes ring{from{width:10px;height:10px;opacity:1}to{width:130vmax;height:130vmax;opacity:0}}
+
+  /* dấu THWIP! đóng lên màn hình rồi biến mất */
+  .thwip{
+    --rot:-12deg;
+    position:absolute;font-family:'Anton',sans-serif;color:#fff;
+    font-size:clamp(26px, 7vw, 40px);letter-spacing:.05em;
+    text-shadow:3px 3px 0 var(--red);
+    transform:rotate(var(--rot)) scale(0);opacity:0;
+  }
+  .t1{top:16%;left:10%}
+  .t2{--rot:9deg;bottom:20%;right:8%}
+  .celebrate.show .t1{animation:stampIn .5s cubic-bezier(.2,1.8,.4,1) .05s forwards, stampOut .4s ease-in 1.5s forwards}
+  .celebrate.show .t2{animation:stampIn .5s cubic-bezier(.2,1.8,.4,1) .3s forwards, stampOut .4s ease-in 1.8s forwards}
+  @keyframes stampIn{to{transform:rotate(var(--rot)) scale(1);opacity:1}}
+  @keyframes stampOut{to{transform:rotate(var(--rot)) scale(1.35);opacity:0}}
+
+  /* nhện đu tơ vòng cung qua màn hình */
+  .swinger{
+    position:absolute;top:2%;left:-12%;font-size:clamp(30px, 6vw, 42px);
+    display:none;pointer-events:none;
+    filter:drop-shadow(0 6px 8px rgba(0,0,0,.6));
+  }
+  .celebrate.show .swinger{
+    display:block;
+    animation:zipX 7s linear infinite 1.2s, arcY 3.5s ease-in-out infinite 1.2s;
+  }
+  @keyframes zipX{from{left:-12%}to{left:112%}}
+  @keyframes arcY{
+    0%,100%{transform:translateY(4vh) rotate(-16deg)}
+    25%,75%{transform:translateY(22vh) rotate(0deg)}
+    50%{transform:translateY(4vh) rotate(16deg)}
+  }
+
+  /* nội dung hiện lần lượt theo nhịp */
+  .cele-inner{position:relative;display:flex;flex-direction:column;align-items:center}
+  .cele-inner>*{opacity:0}
+  .celebrate.show h2{animation:pop .55s cubic-bezier(.2,1.6,.4,1) .55s both}
+  .celebrate.show .cele-inner p{animation:riseIn .55s ease-out 1.0s both}
+  .celebrate.show .date-chip{animation:pop .5s cubic-bezier(.2,1.6,.4,1) 1.4s both}
+  .celebrate.show .heart{animation:riseIn .4s ease-out 1.7s both, beat 1s ease-in-out infinite 2.1s}
+  .celebrate h2{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(42px, 12vw, 84px);color:var(--gold);
+    letter-spacing:.04em;margin-bottom:14px;
+    text-shadow:0 0 34px rgba(245,185,66,.55), 3px 3px 0 var(--red-deep);
+  }
+  .celebrate p{font-size:17px;line-height:1.7;max-width:420px;color:var(--white)}
+  .date-chip{
+    margin-top:18px;display:inline-flex;align-items:center;
+    background:rgba(11,16,53,.6);border:1px solid rgba(245,185,66,.55);
+    color:var(--gold);font-weight:700;font-size:13.5px;letter-spacing:.03em;
+    padding:10px 18px;border-radius:999px;
+    box-shadow:0 0 22px rgba(245,185,66,.3);
+  }
+  .celebrate .heart{font-size:44px;margin-top:18px}
+  .cele-close{
+    position:absolute;top:16px;right:16px;z-index:3;
+    width:44px;height:44px;border-radius:50%;
+    background:rgba(245,246,250,.12);border:1px solid rgba(245,246,250,.35);
+    color:var(--white);font-size:20px;line-height:1;font-weight:700;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;
+  }
+  .cele-close:hover{background:rgba(245,246,250,.22)}
+  @keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+  @keyframes beat{0%,100%{transform:scale(1)}30%{transform:scale(1.25)}}
+
+  .confetti{position:fixed;top:-30px;z-index:11;font-size:22px;pointer-events:none;animation:fall linear forwards}
+  @keyframes fall{to{transform:translateY(115vh) rotate(720deg)}}
+
+  /* ================= LỚP TƠ PHỦ — VUỐT ĐỂ XÉ ================= */
+  .cover{
+    position:fixed;inset:0;z-index:30;touch-action:none;cursor:grab;
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .cover.done{opacity:0;transform:scale(1.08);pointer-events:none}
+  .cover canvas{display:block;width:100%;height:100%}
+  .cover .hint{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    text-align:center;pointer-events:none;color:var(--white);
+    font-weight:700;letter-spacing:.06em;font-size:15px;
+    text-shadow:0 2px 10px rgba(0,0,0,.85);
+    transition:opacity .4s;white-space:nowrap;
+  }
+  .cover .skip{
+    position:absolute;left:50%;bottom:28px;transform:translateX(-50%);
+    background:rgba(245,246,250,.12);border:1px solid rgba(245,246,250,.32);
+    color:var(--white);font-family:'Be Vietnam Pro',sans-serif;font-weight:700;
+    font-size:13px;letter-spacing:.04em;padding:12px 20px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  }
+  .cover .hint .hand{display:block;font-size:34px;margin-top:10px;animation:swipeHand 1.6s ease-in-out infinite}
+  @keyframes swipeHand{0%,100%{transform:translateX(-26px) rotate(-8deg)}50%{transform:translateX(26px) rotate(8deg)}}
+  .cover.touched .hint{opacity:0}
+
+  .sound-btn{
+    position:fixed;top:14px;right:14px;z-index:40;
+    width:44px;height:44px;border-radius:50%;
+    background:rgba(11,16,53,.6);border:1px solid rgba(245,246,250,.28);
+    color:var(--white);font-size:18px;line-height:1;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;
+    backdrop-filter:blur(6px);transition:transform .15s, background .15s;
+  }
+  .sound-btn:hover{transform:scale(1.06);background:rgba(11,16,53,.85)}
+  .sound-btn.off{opacity:.55}
+
+  @media (max-width:420px){.details{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation:none !important;transition:none !important}
+    .cell,.ticket,.cele-inner>*{opacity:1}
+    .confetti,.splat,.rays,.swinger,.thwip,#fw{display:none}
+  }
+</style>
+</head>
+<body>
+
+<button class="sound-btn" id="soundBtn" type="button" aria-label="Bật/tắt âm thanh">🔊</button>
+
+<audio id="bgm" src="theme.mp3" loop preload="auto"></audio>
+
+<div class="fog"></div>
+<div class="city-lights" id="lights"></div>
+
+<svg class="web tl" width="220" height="220" viewBox="0 0 220 220" fill="none" stroke="#F5F6FA" stroke-width="1">
+  <path d="M0 0 L220 220 M0 0 L220 90 M0 0 L90 220 M0 0 L220 30 M0 0 L30 220"/>
+  <path d="M40 12 Q46 40 12 46 M80 24 Q92 80 24 92 M124 38 Q142 124 38 142 M170 52 Q196 170 52 196"/>
+</svg>
+<svg class="web br" width="220" height="220" viewBox="0 0 220 220" fill="none" stroke="#F5F6FA" stroke-width="1">
+  <path d="M0 0 L220 220 M0 0 L220 90 M0 0 L90 220 M0 0 L220 30 M0 0 L30 220"/>
+  <path d="M40 12 Q46 40 12 46 M80 24 Q92 80 24 92 M124 38 Q142 124 38 142 M170 52 Q196 170 52 196"/>
+</svg>
+
+<div class="rig">
+  <div class="thread"></div>
+  <div class="spider" id="spider" aria-hidden="true" title="Bấm thử xem 😉">🕷️</div>
+</div>
+
+<div class="stage" id="stage">
+<main class="ticket" id="ticket">
+  <div class="glare" id="glare"></div>
+  <div class="hero">
+    <img src="poster.jpg" alt="Spider-Man: Brand New Day" fetchpriority="high">
+  </div>
+  <header class="ticket-head">
+    <div class="eyebrow">🎬 Thư mời VIP · Chỉ dành cho một người</div>
+    <h1>SPIDER-MAN<span class="sub">BRAND NEW DAY</span></h1>
+    <div class="countdown" id="countdown">⏳ Đang tính giờ…</div>
+  </header>
+
+  <section class="msg">
+    <!-- ✏️ Sửa lời nhắn ở đây -->
+    <p><span class="to">Gửi vợ yêu,</span></p>
+    <p>Tối nay anh có hai chiếc vé và một chỗ trống bên tay phải.
+    Người Nhện lo cứu thế giới, còn em chỉ cần cứu buổi tối của anh thôi. Đi xem với anh nhé? 🕸️</p>
+  </section>
+
+  <div class="tear" aria-hidden="true"></div>
+
+  <section class="details">
+    <div class="cell">
+      <div class="label">Thời gian</div>
+      <div class="value">19:30 – 21:55<small>Thứ 7, 08/08/2026 · Tối nay!</small></div>
+    </div>
+    <div class="cell">
+      <div class="label">Phòng chiếu · Ghế</div>
+      <div class="value">Screen 1 · E09 &amp; E10<small>Ghế đôi, cạnh nhau 😉</small></div>
+    </div>
+    <div class="cell wide">
+      <div class="label">Rạp chiếu</div>
+      <div class="value">BHD Star The Garden<small>Tầng 4–5, Garden Shopping Center, phố Mễ Trì, Mỹ Đình 1, Nam Từ Liêm, Hà Nội</small></div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button id="yes">Đi thôi! 🕸️</button>
+    <button id="maybe">Hmm… để nghĩ đã</button>
+  </div>
+</main>
+</div>
+
+<div class="celebrate" id="celebrate" role="dialog" aria-live="polite">
+  <canvas id="fw" aria-hidden="true"></canvas>
+  <button class="cele-close" id="celeClose" type="button" aria-label="Đóng">✕</button>
+  <div class="flash" aria-hidden="true"></div>
+  <div class="rays" aria-hidden="true"></div>
+  <div class="thwip t1" aria-hidden="true">THWIP!</div>
+  <div class="thwip t2" aria-hidden="true">THWIP!</div>
+  <div class="swinger" aria-hidden="true">🕷️</div>
+  <div class="cele-inner">
+    <h2>YESSS! 🕷️</h2>
+    <!-- ✏️ Sửa giờ hẹn ở đây -->
+    <p>Anh biết mà! Hẹn em <strong>18:45 tại rạp</strong> nhé — đi sớm xíu để mua bắp nước. Bắp rang bơ anh bao 🍿</p>
+    <div class="date-chip">📍 BHD The Garden&nbsp;·&nbsp;⏰ 18:45&nbsp;·&nbsp;💺 E09 &amp; E10</div>
+    <div class="heart">❤️</div>
+  </div>
+</div>
+
+<script>
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ================= ÂM THANH ================= */
+  const SFX=(()=>{
+    let ctx=null, master=null, on=true, noiseBuf=null;
+    function init(){
+      if(ctx) return ctx;
+      const AC=window.AudioContext||window.webkitAudioContext;
+      if(!AC) return null;
+      ctx=new AC();
+      master=ctx.createGain(); master.gain.value=.5; master.connect(ctx.destination);
+      noiseBuf=ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+      const d=noiseBuf.getChannelData(0);
+      for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1;
+      return ctx;
+    }
+    function ready(){ if(!on) return null; const c=init(); if(!c) return null;
+      if(c.state==='suspended') c.resume(); return c; }
+    function env(node,t,a,dur,peak){
+      const g=ctx.createGain();
+      g.gain.setValueAtTime(0,t);
+      g.gain.linearRampToValueAtTime(peak,t+a);
+      g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+      node.connect(g); g.connect(master);
+      return g;
+    }
+    function noise(t,dur,f0,f1,peak,type){
+      const s=ctx.createBufferSource(); s.buffer=noiseBuf;
+      const bp=ctx.createBiquadFilter(); bp.type=type||'bandpass'; bp.Q.value=1.1;
+      bp.frequency.setValueAtTime(f0,t);
+      bp.frequency.exponentialRampToValueAtTime(f1,t+dur);
+      s.connect(bp); env(bp,t,.005,dur,peak);
+      s.start(t); s.stop(t+dur+.05);
+    }
+    function tone(t,f0,f1,dur,peak,type){
+      const o=ctx.createOscillator(); o.type=type||'triangle';
+      o.frequency.setValueAtTime(f0,t);
+      if(f1) o.frequency.exponentialRampToValueAtTime(f1,t+dur);
+      env(o,t,.01,dur,peak);
+      o.start(t); o.stop(t+dur+.05);
+    }
+    return {
+      toggle(){ on=!on; if(on) ready(); else if(ctx) ctx.suspend(); return on; },
+      get on(){ return on },
+      /* tiếng bắn tơ */
+      thwip(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        noise(t,.20,900,5200,.45); tone(t,220,1400,.14,.10,'sawtooth'); },
+      /* tiếng cào rách lớp tơ (gọi liên tục khi vuốt) */
+      tear(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        noise(t,.09,1600,600,.13,'highpass'); },
+      /* mở được thiệp */
+      reveal(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        noise(t,.5,4000,300,.30);
+        [523.25,659.25,783.99].forEach((f,i)=>tone(t+.12+i*.07,f,null,.5,.13,'triangle')); },
+      /* bấm nút */
+      click(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        tone(t,660,320,.09,.12,'square'); },
+      /* nút năn nỉ */
+      boing(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        tone(t,300,760,.16,.13,'sine'); tone(t+.10,760,300,.18,.10,'sine'); },
+      /* pháo hoa nổ */
+      pop(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        noise(t,.55,2600,120,.34,'lowpass'); tone(t,140,45,.32,.16,'sine'); },
+      /* nhạc hiệu ăn mừng */
+      fanfare(){ const c=ready(); if(!c) return; const t=c.currentTime;
+        [[523.25,0],[659.25,.11],[783.99,.22],[1046.5,.34]].forEach(([f,d])=>{
+          tone(t+d,f,null,.55,.16,'triangle'); tone(t+d,f*2,null,.35,.05,'sine'); });
+        noise(t+.34,.9,5000,900,.14,'highpass'); }
+    };
+  })();
+
+  /* ---- nhạc nền ---- */
+  const BGM=(()=>{
+    const el=document.getElementById('bgm');
+    let started=false, target=.34, fade=null;
+    function to(v,ms){
+      clearInterval(fade);
+      const from=el.volume, t0=performance.now();
+      fade=setInterval(()=>{
+        const k=Math.min((performance.now()-t0)/ms,1);
+        el.volume=from+(v-from)*k;
+        if(k>=1) clearInterval(fade);
+      },40);
+    }
+    el.volume=0;
+    return {
+      start(){
+        if(started) return; started=true;
+        el.play().then(()=>to(target,2200)).catch(()=>{started=false});
+      },
+      duck(){ to(target*.42,300); setTimeout(()=>to(target,1400),2600) },
+      swell(){ target=.44; to(target,1200) },
+      mute(m){ if(m){to(0,250); setTimeout(()=>el.pause(),300)} else {el.play().catch(()=>{}); to(target,600)} }
+    };
+  })();
+  /* trình duyệt chỉ cho phát sau thao tác đầu tiên */
+  ['pointerdown','keydown'].forEach(ev=>addEventListener(ev,()=>BGM.start(),{once:true}));
+
+  const soundBtn=document.getElementById('soundBtn');
+  soundBtn.addEventListener('click',()=>{
+    const on=SFX.toggle();
+    soundBtn.textContent=on?'🔊':'🔇';
+    soundBtn.classList.toggle('off',!on);
+    BGM.mute(!on);
+    if(on) SFX.click();
+  });
+
+  /* ---- đèn thành phố: 3 lớp parallax ---- */
+  const lights=document.getElementById('lights');
+  const layers=[];
+  for(let L=0;L<3;L++){
+    const layer=document.createElement('div');
+    layer.className='city-lights';
+    layer.dataset.depth=(L+1)*6;
+    const count=innerWidth<600?10:16;
+    for(let i=0;i<count;i++){
+      const s=document.createElement('span');
+      const size=1.5+L*1.2;
+      s.style.width=s.style.height=size+'px';
+      s.style.left=Math.random()*100+'vw';
+      s.style.top=Math.random()*100+'vh';
+      s.style.animationDelay=(Math.random()*3)+'s';
+      layer.appendChild(s);
+    }
+    document.body.appendChild(layer);
+    layers.push(layer);
+  }
+  lights.remove();
+
+  /* ---- tilt 3D + glare theo con trỏ ---- */
+  const stage=document.getElementById('stage');
+  const ticket=document.getElementById('ticket');
+  const glare=document.getElementById('glare');
+  function tilt(x,y){
+    const r=ticket.getBoundingClientRect();
+    const px=(x-r.left)/r.width, py=(y-r.top)/r.height;
+    const rx=(py-.5)*-8, ry=(px-.5)*10;
+    ticket.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;
+    glare.style.setProperty('--gx',(px*100)+'%');
+    glare.style.setProperty('--gy',(py*100)+'%');
+  }
+  /* chỉ bật trên thiết bị có chuột — trên điện thoại vuốt cuộn sẽ không làm vé giật */
+  const hasHover=matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if(!reduceMotion && hasHover){
+    let raf=null;
+    stage.addEventListener('pointermove',e=>{
+      if(raf) return;
+      raf=requestAnimationFrame(()=>{tilt(e.clientX,e.clientY);raf=null});
+    });
+    stage.addEventListener('pointerleave',()=>{ticket.style.transform=''});
+    /* parallax nền theo con trỏ */
+    let raf2=null;
+    window.addEventListener('pointermove',e=>{
+      if(raf2) return;
+      raf2=requestAnimationFrame(()=>{
+        const dx=(e.clientX/innerWidth-.5), dy=(e.clientY/innerHeight-.5);
+        layers.forEach(l=>{
+          const d=+l.dataset.depth;
+          l.style.transform=`translate(${dx*d}px, ${dy*d}px)`;
+        });
+        raf2=null;
+      });
+    });
+  }
+
+  /* ---- đếm ngược tới 19:30 ---- */
+  const target=new Date('2026-08-08T19:30:00+07:00').getTime();
+  const cd=document.getElementById('countdown');
+  function tick(){
+    const diff=target-Date.now();
+    if(diff<=0){cd.textContent='🍿 Phim đang chiếu — chạy thôi!';return}
+    const h=Math.floor(diff/3.6e6), m=Math.floor(diff%3.6e6/6e4), s=Math.floor(diff%6e4/1e3);
+    cd.textContent=`⏳ Còn ${h} giờ ${String(m).padStart(2,'0')} phút ${String(s).padStart(2,'0')} giây là chiếu`;
+    setTimeout(tick,1000);
+  }
+  tick();
+
+  /* ---- vị trí hai lỗ khuyết bám theo đường xé ---- */
+  const tearEl=document.querySelector('.tear');
+  function placeNotches(){
+    ticket.style.setProperty('--tearY', tearEl.offsetTop+'px');
+  }
+  placeNotches();
+  addEventListener('resize',placeNotches);
+  addEventListener('load',placeNotches);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(placeNotches);
+
+  /* ---- bắn tơ khi chạm vào nền ---- */
+  const webSVG=`<svg width="90" height="90" viewBox="0 0 90 90" fill="none" stroke="#F5F6FA" stroke-width="1.5">
+    <path d="M45 45 L45 2 M45 45 L88 45 M45 45 L45 88 M45 45 L2 45 M45 45 L75 15 M45 45 L75 75 M45 45 L15 75 M45 45 L15 15"/>
+    <path d="M45 20 Q62 28 70 45 Q62 62 45 70 Q28 62 20 45 Q28 28 45 20 M45 32 Q54 36 58 45 Q54 54 45 58 Q36 54 32 45 Q36 36 45 32"/>
+  </svg>`;
+  document.addEventListener('click',e=>{
+    if(reduceMotion) return;
+    if(e.target.closest('button,.ticket,.celebrate,.spider')) return;
+    const d=document.createElement('div');
+    d.className='splat';
+    d.style.left=e.clientX+'px';
+    d.style.top=e.clientY+'px';
+    d.innerHTML=webSVG;
+    SFX.thwip();
+    document.body.appendChild(d);
+    setTimeout(()=>d.remove(),1000);
+  });
+
+  /* ---- con nhện thả thân khi bấm ---- */
+  const spider=document.getElementById('spider');
+  spider.addEventListener('click',()=>{
+    spider.classList.remove('drop');void spider.offsetWidth;
+    spider.classList.add('drop');
+    SFX.thwip();
+  });
+
+  /* ---- pháo hoa canvas ---- */
+  let fwStarted=false, fwTimer=null;
+  function startFireworks(){
+    if(fwStarted) return; fwStarted=true;
+    const cvs=document.getElementById('fw');
+    const c=cvs.getContext('2d');
+    const dpr2=Math.min(devicePixelRatio||1,2);
+    cvs.width=innerWidth*dpr2; cvs.height=innerHeight*dpr2;
+    c.setTransform(dpr2,0,0,dpr2,0,0);
+    const colors=['#E62429','#F5B942','#F5F6FA','#5B7CFF','#FF6B9D'];
+    const rockets=[], sparks=[];
+    function launch(){
+      rockets.push({
+        x:innerWidth*(0.15+Math.random()*0.7), y:innerHeight+10,
+        vx:(Math.random()-.5)*1.6, vy:-(innerHeight*0.011+Math.random()*3),
+        color:colors[(Math.random()*colors.length)|0]
+      });
+    }
+    function boom(r){
+      const n=innerWidth<600?46:70;
+      for(let i=0;i<n;i++){
+        const a=Math.random()*Math.PI*2, s=2+Math.random()*4.5;
+        sparks.push({x:r.x,y:r.y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:1,color:r.color,r:1.4+Math.random()*1.7});
+      }
+      if(navigator.vibrate) navigator.vibrate(15);
+      SFX.pop();
+    }
+    function loop(){
+      /* phủ lớp mờ thay vì xoá trắng → tạo vệt đuôi pháo hoa */
+      c.globalCompositeOperation='destination-out';
+      c.fillStyle='rgba(0,0,0,.22)';
+      c.fillRect(0,0,innerWidth,innerHeight);
+      c.globalCompositeOperation='source-over';
+      for(let i=rockets.length-1;i>=0;i--){
+        const r=rockets[i];
+        r.x+=r.vx; r.y+=r.vy; r.vy+=0.13;
+        c.fillStyle=r.color;
+        c.beginPath(); c.arc(r.x,r.y,2.4,0,7); c.fill();
+        if(r.vy>-1){rockets.splice(i,1); boom(r)}
+      }
+      for(let i=sparks.length-1;i>=0;i--){
+        const s=sparks[i];
+        s.x+=s.vx; s.y+=s.vy; s.vy+=0.055; s.vx*=.985; s.vy*=.985; s.life-=.011;
+        if(s.life<=0){sparks.splice(i,1); continue}
+        c.globalAlpha=Math.max(s.life,0);
+        c.fillStyle=s.color;
+        c.beginPath(); c.arc(s.x,s.y,s.r,0,7); c.fill();
+      }
+      c.globalAlpha=1;
+      requestAnimationFrame(loop);
+    }
+    /* loạt mở màn dồn dập, sau đó đều đặn */
+    [0,280,560,900,1300].forEach(t=>setTimeout(launch,t));
+    fwTimer=setInterval(()=>{if(document.visibilityState==='visible') launch()},1700);
+    loop();
+  }
+
+  /* ---- nút đồng ý → ăn mừng ---- */
+  const emojis=['🕷️','🕸️','❤️','🍿','✨','💛'];
+  document.getElementById('yes').addEventListener('click',()=>{
+    document.getElementById('celebrate').classList.add('show');
+    SFX.fanfare();
+    BGM.swell(); BGM.duck();
+    if(reduceMotion) return;
+    if(navigator.vibrate) navigator.vibrate([60,40,60]);
+    startFireworks();
+    let wave=0;
+    const burst=()=>{
+      const n=innerWidth<600?28:45;
+      for(let i=0;i<n;i++){
+        const c=document.createElement('div');
+        c.className='confetti';
+        c.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+        c.style.left=Math.random()*100+'vw';
+        c.style.fontSize=(16+Math.random()*16)+'px';
+        c.style.animationDuration=(2.5+Math.random()*2.5)+'s';
+        c.style.animationDelay=(Math.random()*.8)+'s';
+        document.body.appendChild(c);
+        setTimeout(()=>c.remove(),6000);
+      }
+      if(++wave<3) setTimeout(burst,1600);
+    };
+    burst();
+  });
+
+  document.getElementById('celeClose').addEventListener('click',()=>{
+    document.getElementById('celebrate').classList.remove('show');
+    SFX.click();
+    if(fwTimer){clearInterval(fwTimer); fwTimer=null}
+    document.querySelectorAll('.confetti').forEach(c=>c.remove());
+  });
+
+  /* ---- nút "để nghĩ đã" — càng bấm càng năn nỉ ---- */
+  const maybe=document.getElementById('maybe');
+  const excuses=['Chắc chưa? 🤨','Ghế E10 sẽ buồn lắm 🥺','Bắp anh bao, nước anh bao 🍿','Thôi mà vợ ơi…','Hết đường lui rồi 😆'];
+  let k=0;
+  maybe.addEventListener('click',()=>{
+    SFX.boing();
+    if(k<excuses.length){maybe.textContent=excuses[k++]}
+    if(k===excuses.length){maybe.style.opacity='0';maybe.style.pointerEvents='none'}
+  });
+
+  /* ---- lớp tơ phủ: vuốt để xé mở thiệp ---- */
+  if(!reduceMotion){
+    const cover=document.createElement('div');
+    cover.className='cover';
+    cover.innerHTML='<canvas></canvas><div class="hint">Vuốt để xé lớp tơ mở thiệp<span class="hand">🕸️</span></div><button class="skip" type="button">Mở luôn thiệp →</button>';
+    document.body.appendChild(cover);
+
+    const cv=cover.querySelector('canvas');
+    const cx2=cv.getContext('2d');
+    const dpr=Math.min(devicePixelRatio||1,2);
+    const W=innerWidth, H=innerHeight;
+    cv.width=W*dpr; cv.height=H*dpr; cx2.scale(dpr,dpr);
+
+    /* nền tối + ánh sáng mờ */
+    cx2.fillStyle='#060924'; cx2.fillRect(0,0,W,H);
+    const g=cx2.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*.8);
+    g.addColorStop(0,'rgba(38,48,124,.55)'); g.addColorStop(1,'rgba(6,9,36,0)');
+    cx2.fillStyle=g; cx2.fillRect(0,0,W,H);
+
+    /* vẽ các cụm mạng nhện */
+    function webAt(x0,y0,R,spokes){
+      const angs=[];
+      for(let i=0;i<spokes;i++) angs.push(i/spokes*Math.PI*2 + (Math.random()-.5)*.15);
+      angs.sort((a,b)=>a-b);
+      cx2.beginPath();
+      for(const a of angs){cx2.moveTo(x0,y0);cx2.lineTo(x0+Math.cos(a)*R, y0+Math.sin(a)*R);}
+      cx2.stroke();
+      for(let r=R*.18;r<R;r+=R*.14){
+        cx2.beginPath();
+        for(let i=0;i<=spokes;i++){
+          const a1=angs[i%spokes]+(i===spokes?Math.PI*2:0);
+          const x=x0+Math.cos(a1)*r, y=y0+Math.sin(a1)*r;
+          if(i===0){cx2.moveTo(x,y);continue}
+          const a0=angs[i-1];
+          const am=(a0+a1)/2;
+          cx2.quadraticCurveTo(x0+Math.cos(am)*r*.93, y0+Math.sin(am)*r*.93, x, y);
+        }
+        cx2.stroke();
+      }
+    }
+    cx2.strokeStyle='rgba(245,246,250,.42)'; cx2.lineWidth=1;
+    webAt(0,0,Math.max(W,H)*.75,14);
+    webAt(W,H*.25,W*.75,12);
+    webAt(W*.3,H,W*.85,13);
+    webAt(W*.88,H*.92,W*.55,10);
+    webAt(W*.6,H*.45,W*.5,11);
+
+    /* cơ chế xé: quét ngón tay tới đâu, tơ tan tới đó */
+    let drawing=false, lx=0, ly=0, dist=0, done=false, tearAudio=0;
+    const need=(W+H)*0.7; /* đủ để thấy đã "xé", không mỏi tay */
+    cx2.lineCap='round'; cx2.lineJoin='round';
+    function erase(x,y){
+      cx2.globalCompositeOperation='destination-out';
+      cx2.lineWidth=76;
+      cx2.beginPath(); cx2.moveTo(lx,ly); cx2.lineTo(x,y); cx2.stroke();
+      cx2.globalCompositeOperation='source-over';
+      const step=Math.hypot(x-lx,y-ly);
+      dist+=step; lx=x; ly=y;
+      tearAudio+=step;
+      if(tearAudio>70){ tearAudio=0; SFX.tear(); }
+      if(dist>need && !done) finishTear();
+    }
+    cover.querySelector('.skip').addEventListener('pointerdown',e=>{
+      e.stopPropagation();
+      if(!done) finishTear();
+    });
+    /* màn hình xoay / đổi cỡ khi lớp phủ còn đó → bỏ qua, tránh canvas lệch */
+    addEventListener('resize',()=>{
+      if(done) return;
+      if(Math.abs(innerWidth-W)>60 || Math.abs(innerHeight-H)>200) finishTear();
+    });
+    cover.addEventListener('pointerdown',e=>{
+      drawing=true; lx=e.clientX; ly=e.clientY;
+      cover.classList.add('touched');
+      try{cover.setPointerCapture(e.pointerId)}catch(_){}
+      erase(e.clientX+.1, e.clientY);
+    });
+    cover.addEventListener('pointermove',e=>{if(drawing) erase(e.clientX,e.clientY)});
+    cover.addEventListener('pointerup',()=>drawing=false);
+    cover.addEventListener('pointercancel',()=>drawing=false);
+
+    function finishTear(){
+      done=true;
+      cover.classList.add('done');
+      SFX.reveal();
+      BGM.start(); BGM.duck();
+      setTimeout(()=>cover.remove(),750);
+      if(navigator.vibrate) navigator.vibrate(40);
+      /* chạy lại intro để vợ được xem trọn màn nhện đu tơ + vé bay vào */
+      document.querySelectorAll('.rig,.thread,.spider,.ticket,.cell,.web path').forEach(el=>{
+        el.style.animation='none'; void el.offsetWidth; el.style.animation='';
+      });
+    }
+  }
+</script>
+</body>
+</html>
